@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* ----- START ------ */
+:root{
+  --clr-blue-500: rgb(89, 167, 255);
+  --clr-orange-500: rgb(255, 187, 0);
+  --clr-bg: rgb(231, 237, 240);
+}
+button{
+  cursor: pointer;
+}
+body{
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: 200px 1fr;
+  font-family: Roboto, "Helvetica Neue";
+}
+
+aside{
+  grid-area: 1 / 1 / 3 / 2;
+  padding: 1em;
+  background-color: var(--clr-blue-500);
+  color: #fff;
+}
+aside a{
+  color: #fff;
+}
+.nav-group{
+  margin: 3em 0;
+}
+.nav-link{
+  transition: all 0.2s ease-in-out;
+}
+.nav-link, .logo{
+  display: flex;
+  gap: 1em;
+  margin: 1em
+}
+.nav-link h3{
+  font-weight: 400;
+}
+
+.nav-link:hover{
+  transform: scale(1.1);
+}
+header{
+  grid-area: 1 / 2 / 2 / 3;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: #fff;
+  box-shadow: 0 5px 10px lightgray;
+  z-index: 1;
+}
+.header-row-one{
+  display: grid;
+  grid-template-columns: 50px 1fr 50px 50px 100px;
+  align-items:center;
+  justify-content: start;
+  gap: 20px;
+}
+.header-row-two{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 1em;
+}
+header img{
+  border-radius: 50%;
+}
+header img.small{
+  width:50px;
+}
+header img.big{
+  width:80px;
+}
+.header-user{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: start;
+}
+.header-user img{
+  grid-area: 1 / 1 / 3 / 2 ;
+}
+.header-user p {
+  font-weight: bold;
+  align-self: end;
+}
+.header-btns button{
+  width: 100px;
+  padding: 0.5em 0;
+  margin: 0 1em;
+  background-color: var(--clr-blue-500);
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+}
+.header-btns button:hover{
+  opacity: 0.8;
+}
+header button {
+  background-color: transparent;
+  border: none;
+}
+.header-row-one button{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+}
+.header-row-one input{
+  background-color: var(--clr-bg);
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  height: 30px;
+}
+main{
+  background-color: var(--clr-bg);
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1em;
+  padding: 1em;
+}
+.projects{
+  grid-area: 1 / 1 / 3 / 2;
+}
+.projects-cards{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  background-color: #fff;
+  border-radius: 8px;
+  border-left: solid 8px var(--clr-orange-500);
+  box-shadow: 2px 2px 5px lightgray;
+}
+.card-btns{
+  margin-top: auto;
+  margin-left: auto;
+}
+.card-btns button{
+  background-color:transparent ;
+  border: none;
+}
+
+.announ{
+  grid-area: 1 / 2 / 2 / 3;
+}
+.ann-card, .user-card{
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px lightgray;
+  padding: 2em;
+}
+
+.ann-card-group p{
+  font-size: 0.8em;
+}
+
+.trending{
+  grid-area: 2 / 2 / 3 / 3;
+}
+.user-link{
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  color: black;
+  margin: 1em 0;
+
+}
+.user-link img {
+  grid-area: 1 / 1 / 3 / 2;
+  border-radius: 50%;
+  width:50px;
+}
+.user-link_name{
+  color: grey;
+}
+
+a{
+  text-decoration: none;
+}
+
+button:hover svg path{
+  color:rgb(255, 187, 0);
+}
